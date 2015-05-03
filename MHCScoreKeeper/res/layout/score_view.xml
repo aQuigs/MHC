@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/def_margin"
+        android:layout_weight="4"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvShotNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="#333333"
+            android:textSize="@dimen/shots_hit_miss_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/def_margin"
+            android:orientation="horizontal"
+            android:weightSum="6" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/def_margin"
+                android:layout_weight="2"
+                android:gravity="left|center_vertical"
+                android:text="@string/shots_made"
+                android:textSize="@dimen/shots_hit_miss_size" />
+
+            <TextView
+                android:id="@+id/tvHitCount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/def_margin"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/default_score"
+                android:textSize="@dimen/shots_hit_miss_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/def_margin"
+                android:layout_weight="2"
+                android:gravity="left|center_vertical"
+                android:text="@string/shots_missed"
+                android:textSize="@dimen/shots_hit_miss_size" />
+
+            <TextView
+                android:id="@+id/tvMissedCount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/def_margin"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/default_score"
+                android:textSize="@dimen/shots_hit_miss_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/def_margin"
+            android:layout_marginLeft="@dimen/def_margin"
+            android:layout_marginRight="@dimen/def_margin"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <Button
+                android:id="@+id/btMakeShot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/success_shot" />
+
+            <Button
+                android:id="@+id/btMissShot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/fail_shot" />
+
+            <Button
+                android:id="@+id/btClear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/clear_shots" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubtotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/def_margin"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/default_score"
+        android:textSize="@dimen/sub_total_size" />
+
+</LinearLayout>

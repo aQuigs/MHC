@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res/com.sqftware.mhc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/llPrevScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:weightSum="5" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="right|center_vertical"
+            android:text="@string/prev_score"
+            android:textSize="@dimen/total_size" />
+
+        <TextView
+            android:id="@+id/tvPrevScore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/default_score"
+            android:textSize="@dimen/total_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTotalScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <Button
+            android:id="@+id/btNewGame"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/new_game"
+            android:textSize="@dimen/shots_hit_miss_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="right|center_vertical"
+            android:text="@string/total_score"
+            android:textSize="@dimen/total_size" />
+
+        <TextView
+            android:id="@+id/tvTotalScore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/default_score"
+            android:textSize="@dimen/total_size" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llTotalScore"
+        android:layout_below="@id/llPrevScore"
+        android:background="@drawable/border"
+        android:fillViewport="true"
+        android:padding="2dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.sqftware.mhc.ScoreView
+                android:id="@+id/sv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:points="1" />
+
+            <com.sqftware.mhc.ScoreView
+                android:id="@+id/sv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:points="2" />
+
+            <com.sqftware.mhc.ScoreView
+                android:id="@+id/sv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:points="3" />
+
+            <com.sqftware.mhc.ScoreView
+                android:id="@+id/sv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:points="4" />
+
+            <com.sqftware.mhc.ScoreView
+                android:id="@+id/sv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:points="5" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

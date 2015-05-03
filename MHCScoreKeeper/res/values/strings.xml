@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MHC Score Keeper</string>
+    <string name="shots_made">Made: </string>
+    <string name="shots_missed">Missed: </string>
+    <string name="default_score">0</string>
+    <string name="success_shot">Shot Made</string>
+    <string name="fail_shot">Shot Missed</string>
+    <string name="clear_shots">Clear</string>
+    <string name="total_score">Total: </string>
+    <string name="prev_score">Last Score: </string>
+    <string name="new_game">Reset</string>
+
+</resources>
