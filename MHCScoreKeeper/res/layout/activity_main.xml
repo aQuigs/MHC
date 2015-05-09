@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:orientation="horizontal"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
+        android:orientation="horizontal"
         android:weightSum="5" >
 
         <TextView
@@ -69,6 +69,7 @@
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/svScroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/llTotalScore"

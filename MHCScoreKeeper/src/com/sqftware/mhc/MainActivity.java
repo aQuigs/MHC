@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity
 {
-    ScoreView[] scores;
+    private ScoreView[] scores;
+    private ScrollView scroller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -17,6 +19,7 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        scroller = (ScrollView) findViewById(R.id.svScroller);
         final TextView total = (TextView) findViewById(R.id.tvTotalScore);
         scores = new ScoreView[5];
         scores[0] = (ScoreView) findViewById(R.id.sv1);
@@ -33,6 +36,7 @@ public class MainActivity extends Activity
             @Override
             public void onClick(View v)
             {
+                scroller.fullScroll(ScrollView.FOCUS_UP);
                 prev.setText(total.getText());
                 total.setText("0");
                 for (ScoreView sv : scores)
