@@ -68,11 +68,53 @@
             android:textSize="@dimen/total_size" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/llHats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llTotalScore"
+        android:orientation="horizontal"
+        android:weightSum="8" >
+
+        <Button
+            android:id="@+id/btHatsIncr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/hat_hit" />
+
+        <Button
+            android:id="@+id/btClearHats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/hat_clear" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/hat_score"
+            android:textSize="@dimen/hat_size" />
+
+        <TextView
+            android:id="@+id/tvHatScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:text="@string/default_score"
+            android:textSize="@dimen/hat_size" />
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/svScroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/llTotalScore"
+        android:layout_above="@id/llHats"
         android:layout_below="@id/llPrevScore"
         android:background="@drawable/border"
         android:fillViewport="true"

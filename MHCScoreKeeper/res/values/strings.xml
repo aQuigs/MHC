@@ -11,5 +11,8 @@
     <string name="total_score">Total: </string>
     <string name="prev_score">Last Score: </string>
     <string name="new_game">Reset</string>
+    <string name="hat_hit">Hat Hit</string>
+    <string name="hat_clear">Clear</string>
+    <string name="hat_score">Hat Score: </string>
 
 </resources>

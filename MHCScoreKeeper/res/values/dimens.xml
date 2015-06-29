@@ -3,5 +3,6 @@
     <dimen name="shots_hit_miss_size">24sp</dimen>
     <dimen name="sub_total_size">48sp</dimen>
     <dimen name="total_size">48sp</dimen>
+    <dimen name="hat_size">26sp</dimen>
     <dimen name="def_margin">3dp</dimen>
 </resources>
